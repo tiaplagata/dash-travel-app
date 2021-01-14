@@ -26,14 +26,8 @@ server = app.server
 
 # Put your Dash code here
 
-df = pd.DataFrame({
-    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-    "Amount": [4, 1, 2, 2, 4, 5],
-    "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
-})
-
-fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
-
+df = pd.read_csv('./assets/cities_df')
+df.head()
 
 # The app layout
 app.layout = html.Div(children=[
@@ -43,7 +37,10 @@ app.layout = html.Div(children=[
 
     dcc.Input(id='input_bar',value='ex. I want to go snorkeling and do yoga on the beach',
               placeholder='MSFT,AAPL',
-              style={'width': '90%', 'height': 50})
+              style={'width': '90%', 'height': 50}),
+
+    html.Button('Tell me where to go!',id='submit',style={'size':'40 px'}), 
+
 
 ])
 
