@@ -123,7 +123,7 @@ app.layout = html.Div(children=[
     html.Br(),
     
     html.Div(["What do you want to do on vacation? ",
-              dcc.Input(id='my-input', placeholder= 'ex. I want to go to the beach',
+              dcc.Input(id='my-input', style={'width':'90%'}, placeholder= 'ex. I want to go to the beach',
                         value='', type='text')]),
     html.Hr(),
     
