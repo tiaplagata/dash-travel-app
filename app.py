@@ -145,7 +145,7 @@ app.layout = html.Div(children=[
     html.H5(children='Methodology', style={'margin-left':'10%',
                                             'margin-right':'10%'}),
     
-    html.Div(children="This machine learning algorithm is predicts your perfect destination based on natural language processing and learning from over 28,000 text data points indicating attractions in 12 different cities from TripAdvisor's list of Traveler's Choice destinations for Popular World Destinations 2020.",
+    html.Div(children="This machine learning algorithm predicts your perfect destination based on natural language processing and learning from over 28,000 text data points indicating attractions in 12 different cities from TripAdvisor's list of Traveler's Choice destinations for Popular World Destinations 2020.",
              style={'margin-left':'10%', 'margin-right':'10%'}),
 
     html.Br(),
