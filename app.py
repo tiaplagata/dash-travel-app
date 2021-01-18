@@ -38,7 +38,9 @@ from sklearn.model_selection import train_test_split
 server = flask.Flask(__name__)
 server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
-app = dash.Dash(__name__)
+external_stylesheets = ['https://codepen.io/tiaplagata/pen/yLaZKap.css']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
 # Dash code here
@@ -116,24 +118,40 @@ sicily_wordcloud = './assets/sicily_wordcloud.png'
     
 # The app layout
 app.layout = html.Div(children=[
-    html.H1(children='Where should I travel?'),
+    html.H1(children='The Destination Dictionary', style={'textAlign': 'center', 'margin-top':'5%'}),
 
-    html.Div(children='When traveling becomes a normal passtime again, where should you go?'),
+    html.H4(children='Not sure where to travel? Use this machine learning algorithm to find your perfect destination in just a few words.',
+            style={'textAlign': 'center'}),
     
     html.Br(),
     
-    html.Div(["What do you want to do on vacation? ",
-              dcc.Input(id='my-input', style={'width':'90%'}, placeholder= 'ex. I want to go to the beach',
-                        value='', type='text')]),
+    html.Div(["What activities do you want to do on vacation?  ",
+              dcc.Input(id='my-input', value='', type='text',
+                        placeholder= 'ex. I want to go to the beach',
+                        style={'width':'65%'})]),
     html.Hr(),
     
-    html.Div(id='my-output'),
+    html.H5(children='You should travel to:', style={'textAlign': 'center'}),
+    
+    html.H4(id='my-output', style={'textAlign': 'center'}),
     
     html.Br(),
     
-    html.Img(id='image')
+    html.Img(id='image', style={'width':'75%', 'margin-bottom':'5%',
+                                'margin-left':'10%', 'margin-right':'10%'}),
 
+    html.Hr(),
 
+    html.H5(children='Methodology', style={'margin-left':'10%',
+                                            'margin-right':'10%'}),
+    
+    html.Div(children="This machine learning algorithm is predicts your perfect destination based on natural language processing and learning from over 28,000 text data points indicating attractions in 12 different cities from TripAdvisor's list of Traveler's Choice destinations for Popular World Destinations 2020.",
+             style={'margin-left':'10%', 'margin-right':'10%'}),
+
+    html.Br(),
+    
+    html.Div(children='Created by: Tia Plagata | tiaplagata@gmail.com',
+             style={'margin-left':'10%', 'margin-right':'10%'}),
     
 ])
     
