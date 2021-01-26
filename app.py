@@ -120,6 +120,9 @@ sicily_wordcloud = './assets/sicily_wordcloud.png'
 app.layout = html.Div(children=[
     html.H1(children='The Destination Dictionary', style={'textAlign': 'center', 'margin-top':'5%'}),
 
+    html.H5(children='Created by: Tia Plagata | tiaplagata@gmail.com',
+             style={'textAlign': 'center', 'color': '#436783'}),
+
     html.H4(children='Not sure where to travel? Use this machine learning algorithm to find your perfect destination in just a few words.',
             style={'textAlign': 'center'}),
     
@@ -149,9 +152,16 @@ app.layout = html.Div(children=[
              style={'margin-left':'10%', 'margin-right':'10%'}),
 
     html.Br(),
-    
-    html.Div(children='Created by: Tia Plagata | tiaplagata@gmail.com',
-             style={'margin-left':'10%', 'margin-right':'10%'}),
+
+    dcc.Link('Check out the full TripAdvisor list here!',
+            href='https://www.tripadvisor.com/TravelersChoice-Destinations',
+            style={'margin-left':'10%', 'margin-right':'10%'}),
+
+    html.Br(),
+
+    dcc.Link('See my full project repo here!',
+            href='https://github.com/tiaplagata/capstone-project',
+            style={'margin-left':'10%', 'margin-right':'10%'})
     
 ])
     

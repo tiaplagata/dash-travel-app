@@ -270,12 +270,12 @@
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   a {
-    color: #1eaedb;
+    color: #436783;
     text-decoration: underline;
     cursor: pointer;
   }
   a:hover {
-    color: #0fa0ce;
+    color: #436783;
   }
   
   /* Buttons
