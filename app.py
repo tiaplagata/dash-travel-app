@@ -15,6 +15,8 @@ from joblib import load
 
 import regex as re
 import string
+import nltk
+nltk.download('stopwords')
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
@@ -55,7 +57,7 @@ X_train_cleaned = preprocess_df(pd.DataFrame(X_train, columns=['Attraction']),
                                 'cleaned')
 
 
-new_stopwords = load('./assets/stopwords_list')
+new_stopwords = stopwords.words('english') + list(string.punctuation)
 new_stopwords += ['bali', 'barcelona', 'crete', 'dubai', 'istanbul', 'london',
                   'majorca', 'phuket', 'paris', 'rome', 'sicily', 'mallorca',
                   'goa', 'private', 'airport', 'transfer']
