@@ -6,7 +6,6 @@ import flask
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
-import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
 
 import plotly.express as px
@@ -24,8 +23,6 @@ from joblib import load
 import pickle
 import regex as re
 import string
-from nltk.corpus import stopwords
-
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
@@ -66,7 +63,7 @@ X_train_cleaned = preprocess_df(pd.DataFrame(X_train, columns=['Attraction']),
                                 'cleaned')
 
 
-new_stopwords = stopwords.words('english') + list(string.punctuation)
+new_stopwords = load('./assets/stopwords_list')
 new_stopwords += ['bali', 'barcelona', 'crete', 'dubai', 'istanbul', 'london',
                   'majorca', 'phuket', 'paris', 'rome', 'sicily', 'mallorca',
                   'goa', 'private', 'airport', 'transfer']
