@@ -52,7 +52,7 @@ pandas==0.25.3
 # patool==1.12
 # patsy==0.5.1
 # pexpect==4.8.0
-# pickleshare==0.7.5
+pickleshare==0.7.5
 # Pillow==8.0.1
 # plotly==4.1.1
 # prompt-toolkit==1.0.15
