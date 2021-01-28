@@ -25,8 +25,8 @@ from sklearn.model_selection import train_test_split
 # Make sure not to change this file name or the variable names below,
 # the template is configured to execute 'server' on 'app.py'
 
-server = flask.Flask(__name__)
-server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
+# server = flask.Flask(__name__)
+# server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
 external_stylesheets = ['https://codepen.io/tiaplagata/pen/yLaZKap.css']
 
