@@ -1,6 +1,5 @@
 gunicorn>=19.7.1
 ## Dash reqs updated 01/13/21
-plotly>=4.11.0
 dash==1.18.1
 dash-renderer==1.8.3
 dash-html-components==1.1.1
