@@ -27,8 +27,6 @@ ipython-genutils==0.2.0
 Jinja2==2.11.2
 jsonschema==3.2.0
 jupyter-core==4.6.3
-Keras==2.4.3
-Keras-Preprocessing==1.1.2
 kiwisolver==1.2.0
 Markdown==3.3.3
 MarkupSafe==1.1.1
@@ -54,12 +52,10 @@ py4j==0.10.7
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 Pygments==2.6.1
-pymongo==3.11.0
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
 pyrsistent==0.16.0
 PySocks==1.7.1
-pyspark==2.4.4
 python-dateutil==2.8.1
 pytz==2020.1
 PyYAML==5.3.1
@@ -72,8 +68,6 @@ seaborn==0.10.0
 Send2Trash==1.5.0
 simplegeneric==0.8.1
 statsmodels==0.11.0
-tensorboard==2.4.0
-tensorboard-plugin-wit==1.7.0
 termcolor==1.1.0
 terminado==0.8.3
 testpath==0.4.4
