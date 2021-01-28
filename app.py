@@ -196,5 +196,5 @@ def update_image(city):
 
 # Run the Dash app
 if __name__ == '__main__':
-    app.server.run(debug=True, threaded=True)
+    server.run(debug=True, threaded=True)
 #     app.run_server(debug=True)
