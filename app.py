@@ -17,6 +17,7 @@ import regex as re
 import string
 import nltk
 nltk.download('stopwords')
+from nltk.corpus import stopwords
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
