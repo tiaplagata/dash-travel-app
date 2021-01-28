@@ -13,7 +13,6 @@ import numpy as np
 
 from joblib import load
 
-import pickle
 import regex as re
 import string
 
