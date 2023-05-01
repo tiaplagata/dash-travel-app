@@ -4,7 +4,7 @@ dash==1.18.1
 dash-renderer==1.8.3
 dash-html-components==1.1.1
 dash-core-components==1.14.1
-flask==1.1.2
+flask==2.3.2
 joblib==0.17.0
 regex==2020.10.11
 nltk==3.5
